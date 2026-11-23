@@ -1,0 +1,407 @@
+1. What is the primary characteristic of a monolithic application architecture?
+
+A. Each business functionality runs as an independent service
+B. All major application components are packaged and deployed as a single application
+C. The frontend and database must run on separate cloud platforms
+D. Every module requires an independent database
+
+2. Which of the following is a major advantage of distributed application architecture over monolithic architecture?
+
+A. All components must be deployed together
+B. Independent services can be developed, deployed, and scaled separately
+C. Network communication is completely eliminated
+D. Database management is no longer required
+
+3. A banking application contains customer management, account management, and transaction processing within a single deployable Spring Boot application. Which architecture does this represent?
+
+A. Microservices architecture
+B. Monolithic architecture
+C. Serverless architecture
+D. Peer-to-peer architecture
+
+4. In a typical Spring Boot web application, which component is primarily responsible for handling HTTP requests from clients?
+
+A. Repository
+B. Controller
+C. Entity
+D. Database
+
+5. What is the primary responsibility of the frontend in a client-server application?
+
+A. To manage database transactions directly
+B. To provide the user interface and interact with backend services
+C. To execute database stored procedures
+D. To configure the backend dependency injection container
+
+6. Which statement best describes the relationship between frontend, backend, and database?
+
+A. The frontend stores all business data, while the database manages user interfaces
+B. The frontend interacts with the backend, and the backend handles business logic and database operations
+C. The database directly manages frontend navigation
+D. The backend is responsible only for displaying HTML pages
+
+7. In client-server architecture, what is the responsibility of the client?
+
+A. To provide requests for services or resources from the server
+B. To manage all server-side business logic
+C. To maintain the server's database schema
+D. To configure server application deployment
+
+8. Which HTTP method is generally used to retrieve information from a REST API?
+
+A. POST
+B. DELETE
+C. GET
+D. PATCH
+
+9. A Spring Boot application exposes /api/customers to allow external applications to retrieve customer information. What does this endpoint represent?
+
+A. A database table
+B. A REST API resource endpoint
+C. A Java package
+D. A Maven plugin
+
+10. What is the primary purpose of REST-based application architecture?
+
+A. To enable communication between systems through standardized HTTP-based interfaces
+B. To eliminate the need for a backend
+C. To allow only Java applications to communicate
+D. To replace relational databases with Java classes
+
+11. A company wants to scale its payment processing functionality independently without scaling its entire application. Which architecture is more suitable?
+
+A. Monolithic architecture
+B. Distributed or microservices architecture
+C. Single-tier architecture
+D. Standalone desktop architecture
+
+12. What is a major challenge associated with distributed application architecture?
+
+A. It cannot support independent deployment
+B. It introduces network communication, service coordination, and distributed failure-handling complexity
+C. It does not support REST APIs
+D. It requires all services to use the same programming language
+
+13. In Spring Boot, what is the primary purpose of the embedded Tomcat server in a typical web application?
+
+A. To manage database schemas
+B. To receive and process incoming HTTP requests through the web application
+C. To compile Java source files
+D. To manage Maven dependencies
+
+14. A mobile application needs to retrieve product details from a Spring Boot backend. Which communication approach is most appropriate?
+
+A. Directly accessing the backend's Java objects
+B. Calling a REST API using an HTTP request
+C. Reading the backend's Maven configuration
+D. Accessing the server's local Java memory
+
+15. A Spring Boot application is divided into separate layers for controllers, services, and repositories but is deployed as one executable JAR. Which statement is correct?
+
+A. It must be a microservices application because it has multiple layers
+B. It can be a layered monolithic application
+C. It is necessarily a distributed application
+D. It cannot use Spring MVC
+
+16. What is the primary objective of the Model-View-Controller (MVC) architectural pattern?
+
+A. To combine database operations and user interface code into a single class
+B. To separate application responsibilities into Model, View, and Controller components
+C. To eliminate the need for backend processing
+D. To replace object-oriented programming
+
+17. In MVC architecture, what is the primary responsibility of the Model?
+
+A. To manage application data and related business state
+B. To receive HTTP requests directly from the browser
+C. To display HTML pages
+D. To configure the web server
+
+18. Which component in MVC is primarily responsible for presenting information to the user?
+
+A. Controller
+B. Repository
+C. View
+D. Service
+
+19. What is the primary responsibility of the Controller in Spring MVC?
+
+A. To directly manage physical database storage
+B. To receive incoming requests, invoke appropriate processing, and return responses
+C. To define HTML page styling
+D. To compile Java source code
+
+20. Which Spring MVC annotation is commonly used to define a controller that returns data directly as the HTTP response body?
+
+A. @Entity
+B. @Repository
+C. @RestController
+D. @Autowired
+
+21. What is the difference between @Controller and @RestController in Spring MVC?
+
+A. @Controller is used only for database operations
+B. @RestController combines @Controller and @ResponseBody behavior
+C. @Controller automatically creates database tables
+D. Both annotations are used exclusively for service classes
+
+22. In a traditional Spring MVC application, what does a controller generally return when using server-side view rendering?
+
+A. A database connection
+B. A view name that is resolved by the view resolver
+C. A Maven dependency
+D. A Java compiler instruction
+
+23. What is the purpose of the @RequestMapping annotation in Spring MVC?
+
+A. To map HTTP requests to controller classes or methods
+B. To define database table relationships
+C. To create Java constructors automatically
+D. To configure Maven build phases
+
+24. Which annotation is specifically designed to map HTTP GET requests to controller methods?
+
+A. @PostMapping
+B. @PutMapping
+C. @GetMapping
+D. @DeleteMapping
+
+25. Consider the following Spring Boot controller method:
+@GetMapping("/products")
+public List<Product> getProducts() {
+    return productService.findAll();
+}
+
+
+What is the primary responsibility of this controller method?
+
+A. To directly execute SQL statements
+B. To handle GET requests and delegate product retrieval to the service layer
+C. To create the Product database table
+D. To configure the Maven build lifecycle
+
+26. In a traditional Spring MVC request-response flow, which component selects and resolves the appropriate view after controller processing?
+
+A. DispatcherServlet and ViewResolver
+B. EntityManager only
+C. Maven Compiler Plugin
+D. JDBC Driver Manager
+
+27. What is the role of the DispatcherServlet in Spring MVC?
+
+A. To act as the front controller that receives and dispatches incoming HTTP requests
+B. To execute SQL queries directly
+C. To generate Java bytecode
+D. To manage Git repositories
+
+28. A developer places database query logic directly inside a Spring MVC controller. Which design principle is most likely being violated?
+
+A. Separation of concerns
+B. Encapsulation only
+C. Method overloading
+D. Inheritance
+
+29. Why is it recommended to separate the Model, View, and Controller responsibilities?
+
+A. To increase dependency between application components
+B. To improve maintainability, testability, and separation of concerns
+C. To eliminate all Java classes
+D. To avoid using HTTP requests
+
+30. A Spring Boot REST application uses @RestController and returns a Java object from a method. What generally happens to the returned object?
+
+A. It is automatically converted into an HTTP response body, commonly JSON through an HTTP message converter
+B. It is automatically stored in a database table
+C. It is converted into a Maven dependency
+D. It is displayed as a server-side JSP page by default
+
+31. In a typical Spring Boot REST application, which component receives an incoming HTTP request first within the Spring MVC request-processing mechanism?
+
+A. Service class
+B. Repository interface
+C. DispatcherServlet
+D. Entity class
+
+32. After DispatcherServlet receives an incoming request, which component is responsible for identifying the appropriate controller method?
+
+A. HandlerMapping
+B. EntityManager
+C. JdbcTemplate
+D. Maven Compiler
+
+33. What is the primary responsibility of a Spring Boot Controller in a layered application?
+
+A. To handle HTTP requests and delegate business operations to the service layer
+B. To execute all database queries directly
+C. To manage database connection pooling
+D. To configure the application's Maven dependencies
+
+34. Which Spring annotation is commonly used to identify a service-layer class?
+
+A. @Entity
+B. @Service
+C. @RestController
+D. @Table
+
+35. What is the primary responsibility of the Service layer in a Spring Boot application?
+
+A. To handle HTTP request routing only
+B. To implement business logic and coordinate application operations
+C. To generate HTML pages
+D. To manage application server ports
+
+36. Which annotation is commonly used to identify a Spring Data access component?
+
+A. @Repository
+B. @ControllerAdvice
+C. @RequestBody
+D. @ConfigurationProperties
+
+37. What is the primary responsibility of the Repository layer?
+
+A. To handle frontend navigation
+B. To manage data access and database-related operations
+C. To validate HTTP response status codes only
+D. To configure API endpoints
+
+38. Consider the following request flow:
+
+Client → Controller → Service → Repository → Database.
+
+Which layer should normally contain the business rule that prevents a customer from withdrawing more money than the available account balance?
+
+A. Controller
+B. Service
+C. Repository
+D. Database connection driver
+
+39. Which Spring annotation is used to indicate that a method should execute within a database transaction?
+
+A. @RequestMapping
+B. @Transactional
+C. @GetMapping
+D. @ResponseBody
+
+40. What is the primary advantage of using dependency injection in Spring Boot?
+
+A. It eliminates the need for Java objects
+B. It reduces tight coupling by allowing Spring to provide required dependencies
+C. It automatically converts SQL into Java code
+D. It prevents all runtime exceptions
+
+41. In a Spring Boot REST API, which annotation is commonly used to bind incoming JSON request data to a Java object?
+
+A. @RequestParam
+B. @PathVariable
+C. @RequestBody
+D. @ResponseStatus
+
+42. Consider the following endpoint:
+@GetMapping("/customers/{id}")
+public Customer getCustomer(@PathVariable Long id) {
+    return customerService.findById(id);
+}
+
+
+What is the purpose of @PathVariable?
+
+A. To retrieve a value from the URL path and bind it to a method parameter
+B. To retrieve data from the HTTP request body
+C. To connect directly to the database
+D. To configure the service-layer transaction
+
+43. A client sends a POST request containing customer details in JSON format. Which combination is most appropriate for processing this request in Spring Boot?
+
+A. @GetMapping and @PathVariable
+B. @PostMapping and @RequestBody
+C. @DeleteMapping and @ResponseBody
+D. @PutMapping and @Entity
+
+44. What is the purpose of ResponseEntity in Spring Boot?
+
+A. To represent an HTTP response with control over status code, headers, and response body
+B. To create a database connection
+C. To manage Java object inheritance
+D. To define Maven project dependencies
+
+45. A repository method returns Optional<Customer>. What is the main advantage of using Optional in this situation?
+
+A. It guarantees that the customer exists
+B. It represents the possible absence of a customer and encourages explicit handling
+C. It automatically creates a new customer if none exists
+D. It converts the customer object into JSON
+
+46. Which Spring mechanism is commonly used to handle exceptions globally across multiple REST controllers?
+
+A. @ComponentScan
+B. @ControllerAdvice or @RestControllerAdvice
+C. @EntityScan
+D. @EnableScheduling
+
+47. A Spring Boot API receives a request for a customer ID that does not exist in the database. Which HTTP status code is generally appropriate for the resulting resource-not-found response?
+
+A. 200 OK
+B. 201 Created
+C. 404 Not Found
+D. 500 Internal Server Error
+
+48. A service method performs two database updates within one transaction. The second update fails. What should normally happen when the transaction is rolled back?
+
+A. The first update remains permanently committed
+B. Both updates are rolled back as part of the same transaction
+C. The entire database is deleted
+D. Only the failed Java method is removed
+
+49. Consider the following Spring Boot request flow:
+Client
+  ↓
+Controller
+  ↓
+Service
+  ↓
+Repository
+  ↓
+Database
+
+
+The application returns an incorrect customer balance even though the repository retrieves the correct database record. Which layer should be investigated first?
+
+A. Frontend browser rendering only
+B. Service layer business calculations and transformations
+C. Maven dependency download process
+D. DispatcherServlet configuration only
+
+50. A Spring Boot application receives a REST request, validates input, executes business logic, accesses the database, and returns a JSON response. Which sequence best represents the typical request-processing flow?
+
+A. Client → Repository → Database → Controller → Service → Response
+B. Client → DispatcherServlet → Controller → Service → Repository → Database → Response
+C. Client → Database → Service → Repository → Controller → Response
+D. Client → Service → Database → DispatcherServlet → Repository → Response
+
+ 
+Q.No.	Answer	Q.No.	Answer
+1	B	26	A
+2	B	27	A
+3	B	28	A
+4	B	29	B
+5	B	30	A
+6	B	31	C
+7	A	32	A
+8	C	33	A
+9	B	34	B
+10	A	35	B
+11	B	36	A
+12	B	37	B
+13	B	38	B
+14	B	39	B
+15	B	40	B
+16	B	41	C
+17	A	42	A
+18	C	43	B
+19	B	44	A
+20	C	45	B
+21	B	46	B
+22	B	47	C
+23	A	48	B
+24	C	49	B
+25	B	50	B
